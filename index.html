@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#170b12">
+<title>Untuk Sayang Aku ♡</title>
+<style>
+:root{--bg:#170b12;--panel:#24111c;--rose:#f4a1b8;--rose2:#ffccd8;--cream:#fff1e8;--muted:#c7aeb8;--line:#ffffff18}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 50% 0%,#512036 0%,var(--bg) 52%);color:var(--cream);font-family:Georgia,"Times New Roman",serif;overflow-x:hidden}
+button{font:inherit;cursor:pointer}
+a{color:inherit}
+#hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:5}
+.float-heart{position:absolute;bottom:-40px;opacity:0;color:#f4a1b8;animation:rise linear forwards;text-shadow:0 0 16px #ff8eae66}
+@keyframes rise{to{transform:translateY(-110vh) rotate(30deg);opacity:0}}
+.wrap{width:min(980px,92%);margin:auto}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;color:var(--muted);font:12px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.brand{color:var(--rose2);letter-spacing:.2em}
+.pill{border:1px solid var(--line);border-radius:99px;padding:9px 13px}
+.hero{min-height:78vh;display:grid;place-items:center;text-align:center;padding:60px 0 76px;position:relative}
+.eyebrow{color:var(--rose);font:11px Arial,sans-serif;letter-spacing:.3em;text-transform:uppercase}
+h1{font-size:clamp(44px,9vw,94px);line-height:.98;font-weight:normal;letter-spacing:-.045em;margin:22px 0}
+h1 em{color:var(--rose);font-weight:normal}
+.hero p{max-width:500px;margin:0 auto;color:var(--muted);font:15px/1.8 Arial,sans-serif}
+.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{border:1px solid #f4a1b85c;border-radius:999px;padding:14px 20px;background:transparent;color:var(--cream);transition:.25s}
+.btn:hover{transform:translateY(-2px);border-color:var(--rose);background:#f4a1b812}
+.btn.primary{background:var(--rose);color:#27101b;border-color:var(--rose);font-weight:bold}
+.scroll-note{margin-top:42px;color:#8e6e7d;font:10px Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase}
+section{padding:72px 0;border-top:1px solid var(--line)}
+.section-kicker{color:var(--rose);font:10px Arial,sans-serif;letter-spacing:.25em;text-transform:uppercase}
+h2{font-size:clamp(32px,5vw,52px);font-weight:normal;line-height:1.08;margin:13px 0 18px}
+.lead{font:15px/1.9 Arial,sans-serif;color:var(--muted);max-width:660px}
+.letter{margin-top:28px;padding:clamp(22px,5vw,44px);background:linear-gradient(145deg,#2a1420,#1d0d16);border:1px solid #f4a1b82a;border-radius:20px;position:relative;overflow:hidden}
+.letter:before{content:"♡";position:absolute;right:18px;top:-32px;font-size:150px;color:#f4a1b80b}
+.letter p{position:relative;font-size:18px;line-height:1.9;color:#f8e4e8;margin:0 0 18px}
+.letter .sign{color:var(--rose);font-style:italic;margin-top:28px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+.memory{min-height:230px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#2a1722;position:relative}
+.memory img,.memory video{width:100%;height:100%;min-height:230px;object-fit:cover;display:block}.memory.collage{min-height:0;background:#120a10}.memory.collage img{height:auto;min-height:0;object-fit:contain;aspect-ratio:4/3}.memory.collage .caption{position:relative;background:linear-gradient(90deg,#24111c,#351526);padding:13px 14px}
+.memory .placeholder{min-height:230px;height:100%;display:grid;place-items:center;text-align:center;padding:18px;background:linear-gradient(150deg,#462037,#1e111a);color:#d8a8b8;font:12px/1.7 Arial,sans-serif}
+.memory .caption{position:absolute;bottom:0;left:0;right:0;padding:30px 14px 13px;background:linear-gradient(transparent,#160a11dd);font:12px Arial,sans-serif;color:#fff}
+.media-panel{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+.media-card{border:1px solid var(--line);background:#24111c;border-radius:16px;padding:20px}
+.media-card h3{font-size:22px;font-weight:normal;margin:0 0 8px}
+.media-card p{font:13px/1.7 Arial,sans-serif;color:var(--muted)}
+.media-card img{width:100%;height:230px;object-fit:cover;border-radius:12px;display:block;background:#10070c}
+.memory img{cursor:zoom-in}
+.media-card video{cursor:pointer}
+audio{width:100%;margin-top:8px;accent-color:var(--rose)}
+video.player{width:100%;border-radius:12px;margin-top:10px;background:#10070c;max-height:320px}
+.apology{text-align:center;padding:30px 0 12px}
+.apology .heart-big{font-size:38px;color:var(--rose);animation:pulse 1.8s infinite}
+@keyframes pulse{50%{transform:scale(1.15);text-shadow:0 0 22px #f4a1b877}}
+.response{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:25px}
+#reply{min-height:52px;margin:24px auto 0;max-width:600px;color:var(--rose2);font:14px/1.8 Arial,sans-serif}
+footer{text-align:center;padding:40px 0 55px;color:#876778;font:11px/1.8 Arial,sans-serif;letter-spacing:.06em}
+.hidden{display:none!important}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .8s,transform .8s}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:700px){.grid{grid-template-columns:1fr 1fr}.memory,.memory img,.memory video,.memory .placeholder{min-height:190px}.media-panel{grid-template-columns:1fr}.hero{min-height:72vh;padding-top:45px}section{padding:55px 0}}
+@media(max-width:430px){.grid{grid-template-columns:1fr}.memory,.memory img,.memory video,.memory .placeholder{min-height:240px}nav{font-size:10px}}
+</style>
+</head>
+<body>
+<div id="hearts" aria-hidden="true"></div>
+<div class="wrap">
+<nav><div class="brand">♡ A LITTLE NOTE</div><div class="pill">dibuat dengan nata</div></nav>
+<header class="hero">
+  <div>
+    <div class="eyebrow">untuk seseorang yang paling aku sayang</div>
+    <h1>Maafin aku,<br><em>Sayang Aku.</em></h1>
+    <p>Aku tahu mungkin sekarang kamu masih kecewa. Aku nggak mau memaksa kamu buat langsung baik-baik aja. Aku cuma ingin kamu tahu, aku sungguh-sungguh ingin memperbaiki semuanya.</p>
+    <div class="actions">
+      <button class="btn primary" id="openLetter">Baca pesanku ♡</button>
+      <button class="btn" id="musicToggle">Putar musik ♪</button>
+    </div>
+    <div class="scroll-note">pelan-pelan aja, ya ↓</div>
+  </div>
+</header>
+
+<section id="letterSection" class="reveal">
+  <div class="section-kicker">01 — dari hati aku</div>
+  <h2>Ada yang ingin<br>aku sampaikan.</h2>
+  <p class="lead">Bukan untuk membenarkan kesalahanku. Aku ingin bertanggung jawab atas apa yang sudah terjadi.</p>
+  <div class="letter">
+    <p>Sayang aku, maafin aku, ya.</p>
+    <p>Aku sadar aku sudah melakukan kesalahan dan mungkin bikin kamu kecewa, sedih, atau merasa nggak dihargai. Aku minta maaf karena sikapku sudah bikin hati kamu nggak tenang. Aku tahu mungkin ada hal-hal yang aku lakukan atau ucapkan yang masih membekas di hati kamu, dan aku benar-benar menyesal karena sudah membuat orang yang aku sayang merasakan hal seperti itu.</p>
+    <p>Aku nggak mau cuma bilang “maaf” lalu berharap semuanya langsung kembali seperti semula. Aku sadar kalau memperbaiki sesuatu yang sudah terlanjur terluka itu nggak semudah membalikkan telapak tangan. Aku tahu kepercayaan dan perasaan kamu itu penting, dan aku harus membuktikannya lewat sikap, bukan cuma kata-kata. Aku nggak mau terus mengulang kesalahan yang sama dan membuat kamu merasakan sakit yang sama lagi.</p>
+    <p>Aku nggak minta kamu langsung memaafkan aku hari ini. Kalau kamu masih kecewa, masih sedih, atau masih butuh waktu buat menenangkan hati, aku akan berusaha menghargainya. Aku nggak mau memaksa kamu buat baik-baik aja hanya demi membuat aku merasa lebih tenang. Aku cuma berharap, suatu saat nanti, saat hati kamu sudah lebih siap, kamu masih mau memberikan aku kesempatan untuk mendengarkan semua yang kamu rasakan dan memperbaiki apa yang masih bisa aku perbaiki.</p>
+    <p>Jujur, aku masih berharap kita bisa baik-baik lagi. Aku masih ingin melihat kita tersenyum bersama, bercanda seperti biasanya, dan menjalani hari tanpa ada rasa sakit yang terus kita pendam. Aku kangen saat semuanya terasa sederhana, saat kita bisa saling memahami tanpa harus merasa sendirian dalam hubungan ini. Tapi aku sadar, aku nggak bisa meminta semuanya kembali seperti dulu kalau aku sendiri belum bisa memperbaiki apa yang membuat semuanya berubah.
+
+Makasih karena sudah hadir di hidup aku. Makasih karena sudah pernah menyayangi aku, bertahan bersama aku, dan memberikan banyak hal yang mungkin selama ini belum cukup aku hargai. Aku sayang kamu, bukan cuma saat semuanya baik-baik aja, tapi aku juga mau belajar menjadi pasangan yang lebih baik saat keadaan sedang sulit. Aku ingin belajar memahami kamu lebih dalam, mendengarkan kamu tanpa selalu membela diri, dan menjaga perasaan kamu dengan lebih baik.
+
+Aku nggak tahu apakah aku masih punya kesempatan untuk memperbaiki semuanya. Tapi kalau kesempatan itu masih ada, aku ingin membuktikan lewat perubahan nyata kalau aku bisa belajar dari kesalahan ini. Aku nggak mau janji yang terdengar indah tapi akhirnya cuma jadi kata-kata. Aku ingin pelan-pelan menunjukkan bahwa penyesalan aku benar-benar nyata.
+
+Dan kalau sekarang kamu belum bisa memaafkan aku, nggak apa-apa, ya, sayang. Aku nggak akan menyalahkan kamu atas perasaan yang kamu punya. Kamu berhak merasa kecewa, kamu berhak mengambil waktu, dan kamu berhak menentukan apa yang terbaik buat diri kamu. Aku cuma ingin kamu tahu kalau permintaan maaf ini datang dari hati, bukan sekadar karena aku takut kehilangan kamu, tetapi juga karena aku sadar kamu nggak pantas menerima hal-hal yang membuat kamu terluka.
+
+Aku masih sayang kamu. Aku masih peduli sama kamu, dan aku masih berharap ada jalan untuk kita memperbaiki semuanya. Tapi aku nggak mau memaksa hati kamu untuk kembali hanya karena hati aku masih menginginkan kamu. Kalau memang masih ada ruang untuk aku, aku ingin menggunakan kesempatan itu sebaik mungkin. Bukan untuk mengulang kesalahan yang sama, melainkan untuk belajar mencintai kamu dengan cara yang lebih baik.
+
+Sekali lagi, maafin aku, ya, sayang. Aku nggak meminta kamu melupakan apa yang sudah terjadi. Aku cuma berharap suatu hari nanti, ketika kamu mengingat semua ini, kamu juga bisa melihat bahwa aku sungguh-sungguh berusaha memperbaiki diri dan menjadi seseorang yang lebih baik untuk kamu.</p>
+    <p class="sign">Dengan tulus, dari aku yang masih belajar mencintai kamu dengan lebih baik. ♡</p>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="section-kicker">02 — potongan cerita kita</div>
+  <h2>Hal-hal kecil<br>yang aku simpan.</h2>
+  <p class="lead">aku menyimpan hal-hal kecil tentang kamu, bukan karena semuanya sempurna, tapi karena semuanya pernah membuat aku bahagia. hal-hal sederhana yang mungkin nggak kamu sadari, tapi selalu punya tempat tersendiri di hati aku. 🤍</p>
+  <div class="grid" id="photoGrid">
+    <div class="memory"><img src="assets/foto-1.jpg.jpg" alt="Foto kenangan 1" loading="lazy"><div class="caption">Momen kecil yang berarti ♡</div></div>
+    <div class="memory"><img src="assets/foto-2.jpg.jpg" alt="Foto kenangan 2" loading="lazy"><div class="caption">Hal sederhana yang aku sayang</div></div>
+    <div class="memory"><img src="assets/foto-3.jpg.jpg" alt="Foto kenangan 3" loading="lazy"><div class="caption">Kenangan manis kita ♡</div></div>
+    <div class="memory"><img src="assets/foto-4.jpg.jpg" alt="Foto kenangan 4" loading="lazy"><div class="caption">Salah satu hari favoritku</div></div>
+    <div class="memory"><img src="assets/foto-5.jpg.jpg" alt="Foto kenangan 5" loading="lazy"><div class="caption">Senyum yang aku ingat</div></div>
+    <div class="memory"><img src="assets/foto-6.jpg.jpg" alt="Foto kenangan 6" loading="lazy"><div class="caption">Cerita kita ♡</div></div>
+    <div class="memory"><img src="assets/foto-7.jpg.jpg" alt="Foto kenangan 7" loading="lazy"><div class="caption">Dan masih banyak cerita</div></div>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="section-kicker">03 — dengarkan kalau kamu mau</div>
+  <h2>Untuk menemani<br>kamu membaca.</h2>
+  <div class="media-panel">
+    <div class="media-card">
+      <h3>Musik untuk kita ♪</h3>
+      <p>Musik akan mencoba diputar saat halaman dibuka, dengan suara yang naik perlahan. Kalau browser memblokir autoplay, sentuh tombol Putar musik.</p>
+      <audio id="bgMusic" loop preload="auto">
+        <source src="assets/music-1.mp3" type="audio/mpeg">
+        Browser kamu tidak mendukung pemutar audio.
+      </audio>
+      <p><small>File musik: <b>assets/musik.mp3</b></small></p>
+      <button class="btn" id="musicToggle" type="button">Putar musik ♪</button>
+    </div>
+    <div class="media-card">
+      <h3>Video kenangan ♡</h3>
+      <p>aku simpan video ini bukan untuk terus hidup di masa lalu, tapi karena aku nggak mau melupakan hal-hal baik yang pernah kita punya. setiap detiknya punya cerita, setiap senyumnya punya arti. apa pun yang terjadi nanti, aku akan selalu bersyukur karena pernah punya kenangan seindah ini sama kamu. 🤍</p>
+      <video class="player" controls playsinline preload="metadata" >
+        <source src="assets/video-1.mp4" type="video/mp4">
+        Browser kamu tidak mendukung pemutar video.
+      </video>
+      <p><small>Video 1: <b>assets/video-1.mp4</b></small></p>
+      <video class="player" controls playsinline preload="metadata" >
+        <source src="assets/video-2.mp4" type="video/mp4">
+        Browser kamu tidak mendukung pemutar video.
+      </video>
+      <p><small>Video 2: <b>assets/video-2.mp4</b></small></p>
+    </div>
+  </div>
+</section>
+
+<section class="reveal apology">
+  <div class="heart-big">♡</div>
+  <div class="section-kicker">04 — nggak perlu buru-buru</div>
+  <h2>Aku boleh coba<br>memperbaikinya?</h2>
+  <p class="lead" style="margin-inline:auto">Kamu bebas merasakan apa pun yang kamu rasakan. Aku akan menghargai jawabanmu, termasuk kalau kamu masih butuh waktu.</p>
+  <div class="response">
+    <button class="btn primary" id="forgiveBtn">Aku mau kita ngobrol ♡</button>
+    <button class="btn" id="timeBtn">Aku masih butuh waktu</button>
+  </div>
+  <div id="reply" role="status" aria-live="polite"></div>
+  <button class="btn hidden" id="hugBtn">Kirim peluk virtual 🫂</button>
+</section>
+<footer>
+  Dibuat khusus untuk Sayang Aku ♡<br>
+  <span>Semoga kata-kata ini jadi awal percakapan yang lebih baik.</span>
+</footer>
+</div>
+<script>
+const hearts = document.getElementById('hearts');
+function floatHeart(){
+  const el=document.createElement('span');
+  el.className='float-heart';
+  el.textContent=['♡','♥','✧'][Math.floor(Math.random()*3)];
+  el.style.left=Math.random()*100+'%';
+  el.style.fontSize=(12+Math.random()*18)+'px';
+  const duration=7+Math.random()*7;
+  el.style.animationDuration=duration+'s';
+  hearts.appendChild(el);
+  setTimeout(()=>el.remove(),duration*1000);
+}
+setInterval(floatHeart,850);
+const letterSection=document.getElementById('letterSection');
+document.getElementById('openLetter').addEventListener('click',()=>{
+  letterSection.scrollIntoView({behavior:'smooth'});
+  letterSection.classList.add('visible');
+});
+const music=document.getElementById('bgMusic');
+const musicToggle=document.getElementById('musicToggle');
+let fadeTimer=null;
+let musicWanted=true;
+let musicWasPlayingBeforeVideo=false;
+function fadeMusic(target, duration=1400, onDone=null){
+  if(fadeTimer) clearInterval(fadeTimer);
+  const start=music.volume;
+  const steps=28;
+  let step=0;
+  if(target>0 && music.paused){
+    music.volume=0;
+    music.play().then(()=>runFade()).catch(()=>{musicToggle.textContent='Sentuh untuk memutar musik ♪';});
+  } else runFade();
+  function runFade(){
+    if(fadeTimer) clearInterval(fadeTimer);
+    const actualStart=music.volume;
+    const began=performance.now();
+    fadeTimer=setInterval(()=>{
+      step++;
+      const progress=Math.min(step/steps,1);
+      music.volume=Math.max(0,Math.min(1,actualStart+(target-actualStart)*progress));
+      if(progress>=1){clearInterval(fadeTimer);fadeTimer=null;if(target===0){music.pause();}if(onDone)onDone();}
+    },Math.max(15,duration/steps));
+  }
+}
+async function startMusic(){
+  musicWanted=true;
+  try{
+    if(music.paused){music.volume=0;await music.play();}
+    fadeMusic(0.55,1800);
+    musicToggle.textContent='Jeda musik Ⅱ';
+  }catch(e){musicToggle.textContent='Putar musik ♪';}
+}
+musicToggle.addEventListener('click',()=>{
+  if(music.paused){startMusic();}
+  else{musicWanted=false;fadeMusic(0,500,()=>{musicToggle.textContent='Putar musik ♪';});}
+});
+music.addEventListener('play',()=>{if(musicWanted)musicToggle.textContent='Jeda musik Ⅱ';});
+// Coba autoplay saat halaman dibuka. Jika ditolak browser, mulai setelah interaksi pertama.
+window.addEventListener('load',()=>{startMusic();},{once:true});
+document.addEventListener('pointerdown',()=>{if(musicWanted && music.paused && [...document.querySelectorAll('video')].every(v=>v.paused))startMusic();},{once:true});
+document.querySelectorAll('video').forEach(v=>{
+  v.addEventListener('play',()=>{
+    musicWasPlayingBeforeVideo=!music.paused && musicWanted;
+    if(!music.paused)fadeMusic(0,650);
+  });
+  const resumeAfterVideo=()=>{if(musicWasPlayingBeforeVideo && musicWanted){musicWasPlayingBeforeVideo=false;startMusic();}};
+  v.addEventListener('pause',resumeAfterVideo);
+  v.addEventListener('ended',resumeAfterVideo);
+});
+// Foto bisa diklik untuk dibuka lebih besar di tab baru.
+document.querySelectorAll('#photoGrid img').forEach(img=>img.addEventListener('click',()=>{
+  const win=window.open(img.src,'_blank','noopener');
+}));
+const reply=document.getElementById('reply');
+const hugBtn=document.getElementById('hugBtn');
+document.getElementById('forgiveBtn').addEventListener('click',()=>{
+  reply.textContent='Makasih sudah mau membuka ruang untuk ngobrol, sayang. Aku akan mendengarkan kamu dulu, tanpa menyela dan tanpa mencari alasan. ♡';
+  hugBtn.classList.remove('hidden');
+});
+document.getElementById('timeBtn').addEventListener('click',()=>{
+  reply.textContent='Nggak apa-apa, sayang. Ambil waktu yang kamu butuhkan, ya. Aku nggak akan memaksamu. Saat kamu siap, aku ada untuk mendengarkan. ♡';
+  hugBtn.classList.add('hidden');
+});
+hugBtn.addEventListener('click',()=>{
+  reply.textContent='Peluk virtual yang hangat buat kamu 🫂♡ Nggak ada paksaan untuk membalasnya. Jaga hati kamu baik-baik, ya.';
+  for(let i=0;i<12;i++)setTimeout(floatHeart,i*100);
+});
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>

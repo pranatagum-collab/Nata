@@ -1,0 +1,17 @@
+PETUNJUK ASET WEBSITE ♡
+
+FOTO (7 buah):
+Masukkan 7 foto ke folder assets dengan nama persis:
+foto-1.jpg, foto-2.jpg, foto-3.jpg, foto-4.jpg, foto-5.jpg, foto-6.jpg, foto-7.jpg
+Kalau foto kamu format PNG/WebP, ubah nama/ekstensi pada bagian src di index.html sesuai file tersebut.
+
+MUSIK:
+Masukkan lagu bernama musik.mp3 ke folder assets.
+Website mencoba memulai musik otomatis dengan fade in. Sebagian browser memblokir autoplay bersuara; jika terjadi, pengunjung cukup menekan tombol Putar musik satu kali.
+Saat video diputar, musik fade out lalu berhenti. Jika video dijeda/selesai, musik kembali fade in apabila musik sebelumnya sedang aktif.
+
+VIDEO (2 buah):
+Masukkan video dengan nama video-1.mp4 dan video-2.mp4 ke folder assets.
+Gambar sampul video tidak wajib; video akan memakai tampilan bawaan pemutar.
+
+Untuk mengganti nama file, buka index.html lalu cari nama file pada bagian visual/media. Pastikan nama dan ekstensi sama persis dengan file di folder assets (huruf besar-kecil juga bisa berpengaruh saat di-hosting).
